@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Space background with stars */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 40px 70px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 160px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 210px 90px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 250px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 300px 70px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 350px 20px, #fff, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 390px 50px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 450px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 500px 30px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 550px 60px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 600px 90px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 650px 20px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 700px 50px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 750px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 800px 10px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 850px 60px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 900px 30px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 950px 90px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 1000px 40px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 1050px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1100px 20px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1150px 80px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 1200px 50px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1250px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 1300px 90px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1350px 60px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 1400px 10px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 20px 120px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 70px 150px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 120px 110px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 180px 140px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 230px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 280px 130px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 330px 150px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 380px 120px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 430px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 480px 110px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 530px 140px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 580px 130px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 630px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 680px 120px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 730px 150px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 780px 110px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 830px 140px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 880px 160px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 930px 120px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 980px 150px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1030px 130px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 1080px 160px, #aaf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1130px 110px, #bbf, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 1180px 140px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 1230px 120px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1280px 150px, #ccf, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 1330px 130px, #ddf, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 1380px 160px, #aaf, rgba(0,0,0,0));
+    background-size: 1440px 180px;
+    background-repeat: repeat;
+    opacity: 0.9;
+    z-index: -1;
+    animation: twinkle 5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for better contrast */
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ffff;
+    z-index: 10;
+}
+
+.controls {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+    height: 40px; /* Maintain spacing */
+}
+
+.solar-system {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ffd200, #f79700, #ff5500);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ff5500, 0 0 100px #ffaa00;
+    z-index: 9;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercury-orbit {
+    width: 120px;
+    height: 120px;
+}
+
+.mercury {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to right, #a9a9a9, #696969);
+    top: 0;
+    left: 50%;
+}
+
+.venus-orbit {
+    width: 170px;
+    height: 170px;
+}
+
+.venus {
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(to right, #e39e1c, #b87333);
+    top: 0;
+    left: 50%;
+}
+
+.earth-orbit {
+    width: 230px;
+    height: 230px;
+}
+
+.earth {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to right, #3366cc, #003399);
+    top: 0;
+    left: 50%;
+}
+
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+}
+
+.mars-orbit {
+    width: 290px;
+    height: 290px;
+}
+
+.mars {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(to right, #ff5500, #cc0000);
+    top: 0;
+    left: 50%;
+}
+
+.jupiter-orbit {
+    width: 370px;
+    height: 370px;
+}
+
+.jupiter {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to right, #d8ca9d, #c1a66c);
+    top: 0;
+    left: 50%;
+}
+
+.saturn-orbit {
+    width: 450px;
+    height: 450px;
+}
+
+.saturn {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to right, #e3e0c9, #d1c38d);
+    top: 0;
+    left: 50%;
+    position: relative;
+}
+
+.saturn-rings {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(210, 180, 140, 0.7);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(75deg);
+}
+
+.uranus-orbit {
+    width: 520px;
+    height: 520px;
+}
+
+.uranus {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(to right, #b5e3e3, #7fc6c6);
+    top: 0;
+    left: 50%;
+}
+
+.neptune-orbit {
+    width: 580px;
+    height: 580px;
+}
+
+.neptune {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to right, #3366cc, #1a3d99);
+    top: 0;
+    left: 50%;
+}
+
+/* Animations */
+@keyframes orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(calc(var(--orbit-radius) / 2)) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(calc(var(--orbit-radius) / 2)) rotate(-360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translateX(15px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(15px) rotate(-360deg);
+    }
+}
+
+.mercury-orbit {
+    animation: orbit 4s linear infinite;
+    --orbit-radius: 120px;
+}
+
+.venus-orbit {
+    animation: orbit 7s linear infinite;
+    --orbit-radius: 170px;
+}
+
+.earth-orbit {
+    animation: orbit 10s linear infinite;
+    --orbit-radius: 230px;
+}
+
+.mars-orbit {
+    animation: orbit 15s linear infinite;
+    --orbit-radius: 290px;
+}
+
+.jupiter-orbit {
+    animation: orbit 25s linear infinite;
+    --orbit-radius: 370px;
+}
+
+.saturn-orbit {
+    animation: orbit 35s linear infinite;
+    --orbit-radius: 450px;
+}
+
+.uranus-orbit {
+    animation: orbit 45s linear infinite;
+    --orbit-radius: 520px;
+}
+
+.neptune-orbit {
+    animation: orbit 55s linear infinite;
+    --orbit-radius: 580px;
+}
+
+.info-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 20, 40, 0.8);
+    border: 1px solid #00aaff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+}
+
+.info-panel h2 {
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+.info-panel p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.planet:hover {
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 100;
+}
+
+.planet::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
